@@ -17,7 +17,7 @@
             required /><br>
           <v-text-field
             v-model="image"
-            label="Name"
+            label="URL"
             placeholder="Image URL"
             required />
           <v-btn @click="addLocation(name, image)"> Add </v-btn>
