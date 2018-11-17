@@ -1,17 +1,19 @@
 <template>
-  <v-app> 
-    <div id="app">
-      <div id="nav">
-        <router-link 
-          to="/" 
-          class="myLink"><v-btn color="info">Demo</v-btn></router-link>
-        <router-link
-          to="/about"
-          class="myLink"><v-btn color="info">About</v-btn></router-link>
-      </div>
-      <router-view />
-    </div>
-  </v-app>
+  <div id="app">
+    <v-app id="inspire">
+      <v-toolbar app>
+        <v-toolbar-title>My Firebase Demo</v-toolbar-title>
+        <router-link to="/"><v-btn color="info">Demo</v-btn></router-link>
+        <router-link to="/about"><v-btn color="info">About</v-btn></router-link>
+      </v-toolbar>
+      <v-content>
+        <v-container fluid>
+          <router-view />
+        </v-container>
+      </v-content>
+      <v-footer />
+    </v-app>
+  </div>
 </template>
 
 <style>
@@ -21,8 +23,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #2c3e50;
-}
-.myLink {
-  text-decoration: none;
 }
 </style>
